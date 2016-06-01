@@ -68,7 +68,7 @@
 		2A91E8C91CC4950A003F1D33 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		2A91E8CB1CC4952C003F1D33 /* DailyWeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		2A91E8CD1CC49579003F1D33 /* DetailBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBackgroundView.swift; sourceTree = "<group>"; };
-		2A91E8D11CC4A15D003F1D33 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../../Treehouse/MyStormy/Stormy/CurrentWeather.plist; sourceTree = "<group>"; };
+		2A91E8D11CC4A15D003F1D33 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = /Users/ryo/Desktop/Desktop/iPhoneAppPractice/WeatherChannel/Weatherly/../../Treehouse/MyStormy/Stormy/CurrentWeather.plist; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
