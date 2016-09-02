@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5BF3A81D79775D00E7F69E /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A5BF3A71D79775D00E7F69E /* CurrentWeather.plist */; };
 		2A91E8881CC4919B003F1D33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91E8871CC4919B003F1D33 /* AppDelegate.swift */; };
 		2A91E88A1CC4919B003F1D33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91E8891CC4919B003F1D33 /* ViewController.swift */; };
 		2A91E88D1CC4919B003F1D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A91E88B1CC4919B003F1D33 /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		2A91E8CA1CC4950A003F1D33 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91E8C91CC4950A003F1D33 /* BackgroundView.swift */; };
 		2A91E8CC1CC4952C003F1D33 /* DailyWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91E8CB1CC4952C003F1D33 /* DailyWeatherTableViewCell.swift */; };
 		2A91E8CE1CC49579003F1D33 /* DetailBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A91E8CD1CC49579003F1D33 /* DetailBackgroundView.swift */; };
-		2A91E8D21CC4A15D003F1D33 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A91E8D11CC4A15D003F1D33 /* CurrentWeather.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5BF3A71D79775D00E7F69E /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CurrentWeather.plist; sourceTree = "<group>"; };
 		2A91E8841CC4919B003F1D33 /* Weatherly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weatherly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A91E8871CC4919B003F1D33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A91E8891CC4919B003F1D33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		2A91E8C91CC4950A003F1D33 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		2A91E8CB1CC4952C003F1D33 /* DailyWeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		2A91E8CD1CC49579003F1D33 /* DetailBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBackgroundView.swift; sourceTree = "<group>"; };
-		2A91E8D11CC4A15D003F1D33 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../Treehouse/MyStormy/Stormy/CurrentWeather.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,7 @@
 		2A91E8861CC4919B003F1D33 /* Weatherly */ = {
 			isa = PBXGroup;
 			children = (
+				2A5BF3A71D79775D00E7F69E /* CurrentWeather.plist */,
 				2A91E8B51CC49327003F1D33 /* Controller */,
 				2A91E8B81CC49340003F1D33 /* Models */,
 				2A91E8B71CC49338003F1D33 /* Views */,
@@ -190,7 +191,6 @@
 		2A91E8C81CC4949D003F1D33 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				2A91E8D11CC4A15D003F1D33 /* CurrentWeather.plist */,
 				2A91E8901CC4919C003F1D33 /* LaunchScreen.storyboard */,
 				2A91E8931CC4919C003F1D33 /* Info.plist */,
 				2A91E8871CC4919B003F1D33 /* AppDelegate.swift */,
@@ -306,7 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A91E8921CC4919C003F1D33 /* LaunchScreen.storyboard in Resources */,
-				2A91E8D21CC4A15D003F1D33 /* CurrentWeather.plist in Resources */,
+				2A5BF3A81D79775D00E7F69E /* CurrentWeather.plist in Resources */,
 				2A91E88F1CC4919C003F1D33 /* Images.xcassets in Resources */,
 				2A91E88D1CC4919B003F1D33 /* Main.storyboard in Resources */,
 			);
