@@ -16,7 +16,7 @@ class BackgroundView: UIView {
         
         //// Gradient Declarations
         // 第3引数の 0,1は決まっている
-        let purpleGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [lightPurple.cgColor, darkPurple.cgColor], locations: [0, 1])
+        let purpleGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [lightPurple.cgColor, darkPurple.cgColor] as CFArray, locations: [0, 1])
         
         //// Background Drawing
         let backgroundPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
