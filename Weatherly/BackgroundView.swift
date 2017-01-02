@@ -25,7 +25,7 @@ class BackgroundView: UIView {
         context?.saveGState()
         
         backgroundPath.addClip()
-        context.drawLinearGradient(purpleGradient,
+        context?.drawLinearGradient(purpleGradient!,
             // 最初の色が始まる位置
             start: CGPoint(x: 160, y: 0),
             // 最初の色が終わる位置(次の色が始まる位置）

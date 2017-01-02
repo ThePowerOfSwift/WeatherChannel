@@ -22,7 +22,7 @@ class DetailBackgroundView: UIView {
         
         backgroundPath.addClip()
         
-        context.drawLinearGradient(purpleGradient,
+        context?.drawLinearGradient(purpleGradient!,
             
             // 最初の色が始まる位置
             start: CGPoint(x: 160, y: 0),
@@ -49,7 +49,7 @@ class DetailBackgroundView: UIView {
         pathStrokeColor.setStroke()
         sunPath.lineWidth = 1
         context?.saveGState()
-        CGContextSetLineDash(context, 0, [2, 2], 2)
+        sunPath.setLineDash([2, 2], count: 2, phase: 0)
         sunPath.stroke()
         context?.restoreGState()
     }
