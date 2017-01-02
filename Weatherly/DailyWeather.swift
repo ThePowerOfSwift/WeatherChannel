@@ -18,7 +18,7 @@ struct DailyWeather{
     var sunriseTime: String?
     var sunsetTime: String?
     var day: String?
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
     
     // いろいろな型をいれるので、anyobjectで
     // as? はoptionalが入るかもなので
@@ -63,22 +63,22 @@ struct DailyWeather{
     }
     
     // 時間変換メソッド
-    func timeStringFromUnixTime(unixTime: Double) -> String{
-        let date = NSDate(timeIntervalSince1970: unixTime)
+    func timeStringFromUnixTime(_ unixTime: Double) -> String{
+        let date = Date(timeIntervalSince1970: unixTime)
         
         // Returns date formatted as 12 hour time.
         dateFormatter.dateFormat = "hh:mm a"
         
-        return dateFormatter.stringFromDate(date)
+        return dateFormatter.string(from: date)
     }
     
     // 時間から日に変える変換メソッド
-    func dayStingFromTime(time: Double) -> String {
-        let date = NSDate(timeIntervalSince1970: time)
-        dateFormatter.locale = NSLocale(localeIdentifier: NSLocale.currentLocale().localeIdentifier)
+    func dayStingFromTime(_ time: Double) -> String {
+        let date = Date(timeIntervalSince1970: time)
+        dateFormatter.locale = Locale(identifier: Locale.current.identifier)
         dateFormatter.dateFormat = "EEEE"
         
-        return dateFormatter.stringFromDate(date)
+        return dateFormatter.string(from: date)
     }
 }
 

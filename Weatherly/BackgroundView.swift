@@ -4,7 +4,7 @@ import UIKit
 class BackgroundView: UIView {
     
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         // Background View
         
         //// Color Declarations
@@ -16,21 +16,21 @@ class BackgroundView: UIView {
         
         //// Gradient Declarations
         // 第3引数の 0,1は決まっている
-        let purpleGradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [lightPurple.CGColor, darkPurple.CGColor], [0, 1])
+        let purpleGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [lightPurple.cgColor, darkPurple.cgColor], locations: [0, 1])
         
         //// Background Drawing
-        let backgroundPath = UIBezierPath(rect: CGRectMake(0, 0, self.frame.width, self.frame.height))
+        let backgroundPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         
         // make a copy of the current graphic context
-        CGContextSaveGState(context)
+        context?.saveGState()
         
         backgroundPath.addClip()
-        CGContextDrawLinearGradient(context, purpleGradient,
+        context.drawLinearGradient(purpleGradient,
             // 最初の色が始まる位置
-            CGPointMake(160, 0),
+            start: CGPoint(x: 160, y: 0),
             // 最初の色が終わる位置(次の色が始まる位置）
-            CGPointMake(160, 568),
-            [.DrawsBeforeStartLocation, .DrawsAfterEndLocation])
+            end: CGPoint(x: 160, y: 568),
+            options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
     }
     
     

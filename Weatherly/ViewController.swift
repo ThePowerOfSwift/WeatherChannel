@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         // configure nav bar back button
         if let buttonFont = UIFont(name: "HelveticaNeue-Thin", size: 20.0){
             let navBarAttributeDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSForegroundColorAttributeName: UIColor.white,
                 NSFontAttributeName: buttonFont
             ]
             

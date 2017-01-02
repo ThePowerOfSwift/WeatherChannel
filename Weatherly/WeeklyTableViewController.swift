@@ -14,7 +14,7 @@ class WeeklyTableViewController: UITableViewController {
     var weeklyWeather: [DailyWeather] = []
     
     //API key
-    private let forecastAPIKey = "6fabee7c9bc65bf101f70e575d028b9e"
+    fileprivate let forecastAPIKey = "6fabee7c9bc65bf101f70e575d028b9e"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +39,17 @@ class WeeklyTableViewController: UITableViewController {
         // WeeklyTableViewControllerのフォントを変える
         if let buttonFont = UIFont(name: "HelveticaNeue-Thin", size: 20.0){
             let barButtonAttributeDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSForegroundColorAttributeName: UIColor.white,
                 NSFontAttributeName: buttonFont
             ]
             
-            UIBarButtonItem.appearance().setTitleTextAttributes(barButtonAttributeDictionary, forState: .Normal)
+            UIBarButtonItem.appearance().setTitleTextAttributes(barButtonAttributeDictionary, for: UIControlState())
             
         }
         
         // Position refresh Control above the background view
         refreshControl?.layer.zPosition = tableView.backgroundView!.layer.zPosition + 1
-        refreshControl?.tintColor = UIColor.whiteColor()
+        refreshControl?.tintColor = UIColor.white
         
     }
     
@@ -60,12 +60,12 @@ class WeeklyTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDaily"{
             if let indexPath = tableView.indexPathForSelectedRow{
                 let dailyWeather = weeklyWeather[indexPath.row]
                 
-                (segue.destinationViewController as! ViewController).dailyWeather =
+                (segue.destination as! ViewController).dailyWeather =
                 dailyWeather
             }
         }
@@ -74,11 +74,11 @@ class WeeklyTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     // displays the number of sections
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerTitle = UILabel()
         headerTitle.text = "Forecast"
         
@@ -86,13 +86,13 @@ class WeeklyTableViewController: UITableViewController {
     }
     
     // displays the number of rows in the section
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return weeklyWeather.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // dequeueReusuableCellWithIdentifier - 引数の中に入れた名前のcellがちゃんと使えるかのメソッド
-        let cell = tableView.dequeueReusableCellWithIdentifier("WeatherCell", forIndexPath: indexPath) as! DailyWeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as! DailyWeatherTableViewCell
         
         let dailyWeather = weeklyWeather[indexPath.row]
         if let maxTemperature = dailyWeather.maxTemperature{
@@ -107,14 +107,14 @@ class WeeklyTableViewController: UITableViewController {
     
     // MARK: - Delegate Methods
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.backgroundColor = UIColor(red: 170/255.0, green: 131/255.0, blue: 224/255.0, alpha: 1.0)
     
         
     }
     
-    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor(red: 165/255.0, green: 142/255.0, blue: 203/255.0, alpha: 1.0)
         let highlightView = UIView()
         highlightView.backgroundColor = UIColor(red: 165/255.0, green: 142/255.0, blue: 203/255.0, alpha: 1.0)
@@ -126,12 +126,12 @@ class WeeklyTableViewController: UITableViewController {
     func retrieveWeatherForecast() {
         let forecastService = ForecastService(APIKey: forecastAPIKey)
         forecastService.getForecast(coordinate.lat, lon: coordinate.lon) {
-            (let forecast) in
+            (forecast) in
             
             if let weatherForecast = forecast,
                 let currentWeather = weatherForecast.currentWeather{
                     
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         
                         if let temperature = currentWeather.temperature {
                             self.currentTemperatureLabel?.text = "\(temperature)º"

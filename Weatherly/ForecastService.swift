@@ -6,23 +6,23 @@ import Foundation
 struct ForecastService {
     
     let forecastAPIKey: String
-    let forecastBaseURL: NSURL?
+    let forecastBaseURL: URL?
     
     init(APIKey: String) {
         forecastAPIKey = APIKey
-        forecastBaseURL = NSURL(string: "https://api.forecast.io/forecast/\(forecastAPIKey)/")
+        forecastBaseURL = URL(string: "https://api.forecast.io/forecast/\(forecastAPIKey)/")
     }
     
-    func getForecast(lat: Double, lon: Double, completion: (Forecast? -> Void)) {
+    func getForecast(_ lat: Double, lon: Double, completion: @escaping ((Forecast?) -> Void)) {
         // forrecastURLはoptinal定数なので、ここでwrapする必要がある
-        if let forecastURL = NSURL(string: "\(lat),\(lon)", relativeToURL: forecastBaseURL) {
+        if let forecastURL = URL(string: "\(lat),\(lon)", relativeTo: forecastBaseURL) {
             //NetworkOperationファイルのインスタンス
             let networkOperation = NetworkOperation(url: forecastURL)
             
             
             networkOperation.downloadJSONFromURL {
                 // typealias型をつかったので、このような書き方
-                (let JSONDictionary) in
+                (JSONDictionary) in
                 let forecast = Forecast(weatherDictionary: JSONDictionary)
                 completion(forecast)
             }

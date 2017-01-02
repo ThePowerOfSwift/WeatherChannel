@@ -267,15 +267,18 @@
 					2A91E8831CC4919B003F1D33 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = N83P8AE7HP;
+						LastSwiftMigration = 0810;
 					};
 					2A91E8971CC4919C003F1D33 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = N83P8AE7HP;
+						LastSwiftMigration = 0810;
 						TestTargetID = 2A91E8831CC4919B003F1D33;
 					};
 					2A91E8A21CC4919C003F1D33 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = N83P8AE7HP;
+						LastSwiftMigration = 0810;
 						TestTargetID = 2A91E8831CC4919B003F1D33;
 					};
 				};
@@ -488,6 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -499,6 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -510,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.WeatherlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weatherly.app/Weatherly";
 			};
 			name = Debug;
@@ -522,6 +528,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.WeatherlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weatherly.app/Weatherly";
 			};
 			name = Release;
@@ -533,6 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.WeatherlyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Weatherly;
 				USES_XCTRUNNER = YES;
 			};
@@ -545,6 +553,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.WeatherlyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Weatherly;
 				USES_XCTRUNNER = YES;
 			};
