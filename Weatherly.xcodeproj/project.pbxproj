@@ -99,10 +99,10 @@
 		2A91E87B1CC4919B003F1D33 = {
 			isa = PBXGroup;
 			children = (
+				2A91E8851CC4919B003F1D33 /* Products */,
 				2A91E8861CC4919B003F1D33 /* Weatherly */,
 				2A91E89B1CC4919C003F1D33 /* WeatherlyTests */,
 				2A91E8A61CC4919C003F1D33 /* WeatherlyUITests */,
-				2A91E8851CC4919B003F1D33 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,12 +119,12 @@
 		2A91E8861CC4919B003F1D33 /* Weatherly */ = {
 			isa = PBXGroup;
 			children = (
-				2A5BF3A71D79775D00E7F69E /* CurrentWeather.plist */,
 				2A91E8B51CC49327003F1D33 /* Controller */,
 				2A91E8B81CC49340003F1D33 /* Models */,
-				2A91E8B71CC49338003F1D33 /* Views */,
-				2A91E88E1CC4919C003F1D33 /* Images.xcassets */,
 				2A91E8C81CC4949D003F1D33 /* Supporting files */,
+				2A91E8B71CC49338003F1D33 /* Views */,
+				2A5BF3A71D79775D00E7F69E /* CurrentWeather.plist */,
+				2A91E88E1CC4919C003F1D33 /* Images.xcassets */,
 			);
 			path = Weatherly;
 			sourceTree = "<group>";
@@ -132,8 +132,8 @@
 		2A91E89B1CC4919C003F1D33 /* WeatherlyTests */ = {
 			isa = PBXGroup;
 			children = (
-				2A91E89C1CC4919C003F1D33 /* WeatherlyTests.swift */,
 				2A91E89E1CC4919C003F1D33 /* Info.plist */,
+				2A91E89C1CC4919C003F1D33 /* WeatherlyTests.swift */,
 			);
 			path = WeatherlyTests;
 			sourceTree = "<group>";
@@ -141,8 +141,8 @@
 		2A91E8A61CC4919C003F1D33 /* WeatherlyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2A91E8A71CC4919C003F1D33 /* WeatherlyUITests.swift */,
 				2A91E8A91CC4919C003F1D33 /* Info.plist */,
+				2A91E8A71CC4919C003F1D33 /* WeatherlyUITests.swift */,
 			);
 			path = WeatherlyUITests;
 			sourceTree = "<group>";
@@ -154,48 +154,53 @@
 				2A91E8BE1CC493DB003F1D33 /* WeeklyTableViewController.swift */,
 			);
 			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		2A91E8B71CC49338003F1D33 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2A91E88B1CC4919B003F1D33 /* Main.storyboard */,
 				2A91E8C91CC4950A003F1D33 /* BackgroundView.swift */,
 				2A91E8CB1CC4952C003F1D33 /* DailyWeatherTableViewCell.swift */,
 				2A91E8CD1CC49579003F1D33 /* DetailBackgroundView.swift */,
+				2A91E88B1CC4919B003F1D33 /* Main.storyboard */,
 			);
 			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2A91E8B81CC49340003F1D33 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2A91E8B91CC49357003F1D33 /* Weather */,
-				2A91E8C41CC49466003F1D33 /* NetworkOperation.swift */,
 				2A91E8C61CC49476003F1D33 /* ForecastService.swift */,
+				2A91E8C41CC49466003F1D33 /* NetworkOperation.swift */,
 			);
 			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2A91E8B91CC49357003F1D33 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				2A91E8BA1CC4936D003F1D33 /* CurrentWeather.swift */,
-				2A91E8BC1CC49385003F1D33 /* Icon.swift */,
 				2A91E8C01CC493F9003F1D33 /* DailyWeather.swift */,
 				2A91E8C21CC49415003F1D33 /* Forecast.swift */,
+				2A91E8BC1CC49385003F1D33 /* Icon.swift */,
 			);
 			name = Weather;
+			path = Weather;
 			sourceTree = "<group>";
 		};
 		2A91E8C81CC4949D003F1D33 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				2A91E8901CC4919C003F1D33 /* LaunchScreen.storyboard */,
-				2A91E8931CC4919C003F1D33 /* Info.plist */,
 				2A91E8871CC4919B003F1D33 /* AppDelegate.swift */,
+				2A91E8931CC4919C003F1D33 /* Info.plist */,
+				2A91E8901CC4919C003F1D33 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting files";
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +394,7 @@
 				2A91E88C1CC4919B003F1D33 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		2A91E8901CC4919C003F1D33 /* LaunchScreen.storyboard */ = {
@@ -397,6 +403,7 @@
 				2A91E8911CC4919C003F1D33 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -487,7 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Weatherly/Info.plist;
+				INFOPLIST_FILE = "Weatherly/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Weatherly/Info.plist;
+				INFOPLIST_FILE = "Weatherly/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sample.mycompany.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
